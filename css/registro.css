@@ -13,8 +13,8 @@
   border-radius: 4px;
   box-shadow: 7px 13px 37px #000;
 }
-.form-register p{
-  font-size: 20px;
+.form-register p:first-child{
+  font-size: 25px;
 }
 .espacios{
   width: 100%;
