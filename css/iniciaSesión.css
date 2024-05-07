@@ -2,10 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+ }
 
-.form-register{
-  width: 400px;
+.form-iS{
+  width: 220px;
   background:linear-gradient(purple,green,yellow,red);
   padding: 30px;
   margin: auto;
@@ -13,10 +13,12 @@
   border-radius: 4px;
   box-shadow: 7px 13px 37px #000;
 }
-.form-register p{
-  font-size: 20px;
+
+section H1{
+  font-size: 25px;
 }
-.espacios{
+
+.section-input{
   width: 100%;
   padding: 10px;
   border-radius: 4px;
@@ -24,22 +26,22 @@
   font-size: 18px;
   border: solid 2px blue;
 }
-.login{
+
+.join{
   height: 40px;
   text-align: center;
   font-size: 18px;
 }
 
-.form-register a{
+section a{
   text-decoration: none;
   color: white;
 }
 
-.form-register a:hover{
-  text-decoration:underline;
+section a:hover{
+  text-decoration: underline;
   color: white;
 }
-
 .boton{
   width: 100%;
   padding: 12px;
@@ -48,8 +50,8 @@
 }
 
 body{
- background-image: url(../img/fondoHojas.jpg);
-}
+  background-image: url(../img/fondoHojas.jpg);
+ }
 
 body a{
   color: white;
