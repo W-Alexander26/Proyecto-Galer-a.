@@ -4,13 +4,29 @@ let apellido = document.getElementById("apellidos");
 
 let correo = document.getElementById("correos");
 
-let contraseña=document.getElementById("contraseñas")
+let contraseña=document.getElementById("contraseñas");
 
-function Registracion() {
+let correoValido= /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 
-  localStorage.setItem('usuario1',nombre.value + " " + apellido.value + " " + correo.value + " " + contraseña.value);
+let listaCorreos =[];
 
-  localStorage.getItem('usuario1')
+function validarCorreo() {
+  listaCorreos.push(correo.value);
+  
+  localStorage.setItem('correo',listaCorreos);
 
+  if (correoValido.test(correo.value)) {
+    alert('El correo es valido');
+    window.location.href="iniciaSesión.html"
+    return true;
+
+  } else {
+    alert('El correo es invalido');
+    return false;
+  }
   
 }
+
+
+
+
