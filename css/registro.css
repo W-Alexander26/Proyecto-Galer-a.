@@ -47,6 +47,10 @@
   font-size: 18px;
 }
 
-.body{
+body{
+ background-image: url(../img/fondoHojas.jpg);
+}
 
+body a{
+  color: white;
 }
