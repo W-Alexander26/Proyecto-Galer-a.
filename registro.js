@@ -8,7 +8,7 @@ let contraseña=document.getElementById("contraseñas")
 
 function Registracion() {
 
-  localStorage.setItem('usuario1',nombre.value);
+  localStorage.setItem('usuario1',nombre.value + " " + apellido.value + " " + correo.value + " " + contraseña.value);
 
   localStorage.getItem('usuario1')
 
