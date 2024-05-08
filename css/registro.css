@@ -13,8 +13,14 @@
   border-radius: 4px;
   box-shadow: 7px 13px 37px #000;
 }
+
 .form-register p:first-child{
   font-size: 25px;
+}
+
+.recordatorio{
+  font-size: 25px;
+  color: white;
 }
 .espacios{
   width: 100%;
@@ -24,6 +30,7 @@
   font-size: 18px;
   border: solid 2px blue;
 }
+
 .login{
   height: 40px;
   text-align: center;

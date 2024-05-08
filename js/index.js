@@ -6,31 +6,48 @@ let correoValido= /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 
 function IniciarSesión() {
 
-  let infoCorreos=localStorage.getItem('correo');
+  let objetUser=localStorage.getItem('infoUsuarios')
+
+  let ObjetAlmacenados=objetUser.split(',');
+
+  console.log(ObjetAlmacenados);
+
+  for (let index = 0; index < ObjetAlmacenados.length; index++) {
+    if (condition) {
+      
+    } else {
+      
+    }
+    
+    
+  }
+
+  /*let infoCorreos=localStorage.getItem('correo');
 
   let infoContraseñas=localStorage.getItem('contraseña');
 
-  let correosAlmacenados=infoCorreos.split(",");
+  let correosAlmacenados=infoCorreos.split(',');
 
-  let contraseñasAlmacenadas=infoContraseñas.split(",");
+  let contraseñasAlmacenadas=infoContraseñas.split(',');*/
+
   
-  for (let index = 0; index < correosAlmacenados.length; index++) {
+  /*for (let index = 0; index < correosAlmacenados.length; index++) {
 
     if (correoValido.test(correo.value) && correosAlmacenados[index]==correo.value && contraseñasAlmacenadas[index]==contraseña.value) {
 
       //&& si contraseñasAlmacenadas es igual a la contresaña.value(login) entonces pasa a página de inicio.
       
-      window.location.href="index.html"
+      window.location.href="mainpage.html"
 
     } else {
 
-      alert('Correo no valido.' +" "+ "Tienes que registrarte primero.");
+      alert('Tu correo o contraseña son incorrectos.' +" "+ "¿Ya estás registrado?");
 
-      window.location.href="registro.html"
+    
       
     }
     
-  }
+  }*/
 
  
 /*
