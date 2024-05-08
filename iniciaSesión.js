@@ -6,18 +6,27 @@ let correoValido= /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 
 function IniciarSesión() {
 
+  let infoCorreos=localStorage.getItem('correo');
 
-  let valor=localStorage.getItem('correo');
+  let infoContraseñas=localStorage.getItem('contraseña');
 
-  let correosAlmacenados=valor.split(",")
+  let correosAlmacenados=infoCorreos.split(",");
+  let contraseñasAlmacenadas=infoContraseñas.split(",");
   
   for (let index = 0; index < correosAlmacenados.length; index++) {
-    if (correosAlmacenados[index]==correo.value ) {
+    if (correosAlmacenados[index]==correo.value && contraseñasAlmacenadas[index]==contraseña.value) {
       //&& si contraseñasAlmacenadas es igual a la contresaña.value(login) entonces pasa a página de inicio.
+      console.log(contraseñasAlmacenadas);
+      console.log(correosAlmacenados);
       
-      console.log("Tiene permiso de entrar al sistema", correosAlmacenados[index]);
       window.location.href="index.html"
-    } 
+
+    } else {
+
+      alert('Correo no valido.' +" "+ "Tienes que registrarte primero.");
+      window.location.href="registro.html"
+      
+    }
     
   }
 
