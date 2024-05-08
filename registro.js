@@ -10,10 +10,14 @@ let correoValido= /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 
 let listaCorreos =[];
 
+let listaContraseñas=[];
+
 function validarCorreo() {
   listaCorreos.push(correo.value);
+  listaContraseñas.push(contraseña.value);
   
   localStorage.setItem('correo',listaCorreos);
+  localStorage.setItem('contraseña',listaContraseñas);
 
   if (correoValido.test(correo.value)) {
     alert('El correo es valido');
