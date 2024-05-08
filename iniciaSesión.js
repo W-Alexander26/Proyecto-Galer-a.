@@ -11,19 +11,21 @@ function IniciarSesión() {
   let infoContraseñas=localStorage.getItem('contraseña');
 
   let correosAlmacenados=infoCorreos.split(",");
+
   let contraseñasAlmacenadas=infoContraseñas.split(",");
   
   for (let index = 0; index < correosAlmacenados.length; index++) {
-    if (correosAlmacenados[index]==correo.value && contraseñasAlmacenadas[index]==contraseña.value) {
+
+    if (correoValido.test(correo.value) && correosAlmacenados[index]==correo.value && contraseñasAlmacenadas[index]==contraseña.value) {
+
       //&& si contraseñasAlmacenadas es igual a la contresaña.value(login) entonces pasa a página de inicio.
-      console.log(contraseñasAlmacenadas);
-      console.log(correosAlmacenados);
       
       window.location.href="index.html"
 
     } else {
 
       alert('Correo no valido.' +" "+ "Tienes que registrarte primero.");
+
       window.location.href="registro.html"
       
     }
