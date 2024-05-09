@@ -8,13 +8,15 @@
 </head>
 <body>
 
-  <h1>Bienvenido</h1>
-  
-  <p id="nombreUsuario"></p>
+  <h1 class="titulo">Bienvenido <label id="nombreUsuario"></label></h1>
 
   <a href="registro.html">Prueba</a>
 
-  <button>Cerrar Sesión</button>
+  <button onclick="cerraSesion()" id="b-t-n-close">Cerrar Sesión</button>
+
+  <input type="file" onchange="mostrarImagen('preVista')">
+
+  <img id="preVista" src="" alt="">
 
   
 

@@ -6,7 +6,8 @@
 
 .form-register{
   width: 400px;
-  background:linear-gradient(purple,green,yellow,red);
+  background: linear-gradient(to right, rgba(221,249,118,1) 0%, rgba(75,159,219,0.77) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ddf976', endColorstr='#4b9fdb', GradientType=1 );
   padding: 30px;
   margin: auto;
   margin-top: 40px;
