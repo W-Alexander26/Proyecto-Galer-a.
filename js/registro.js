@@ -12,11 +12,13 @@ let correoValido= /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 
 let listaContraseñas=[];*/
 
-let infoUser=[];
+let objetUser=[];
 
 function validarCorreo() {
 
   if (correoValido.test(correo.value) && nombre.value !="" && apellido.value !="" && contraseña.value !="") {
+
+    let objetUser=JSON.parse(localStorage.getItem('infoUsuarios')) || [];
 
     infoUsuario={
 
@@ -29,27 +31,18 @@ function validarCorreo() {
       contraseña: contraseña.value,
 
     }
+      alert('El correo es valido');
 
-
-    
-    alert('El correo es valido');
-
-    infoUser.push(infoUsuario);
+      objetUser.push(infoUsuario);
    
+     localStorage.setItem('infoUsuarios', JSON.stringify(objetUser));
 
-    localStorage.setItem('infoUsuarios', JSON.stringify(infoUser));
-
-    //console.log(listaCorreos);//
-
-  //window.location.href="index.html"
-
-    return true;
+     window.location.href="index.html"
 
   } else {
 
- 
-    
-    return false;
+    alert('Los datos son incorrectos.')
+
   }
   
 }

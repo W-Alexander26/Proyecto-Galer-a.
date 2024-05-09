@@ -2,25 +2,23 @@ let correo=document.getElementById("correos");
 
 let contraseña=document.getElementById("contraseñas");
 
-let correoValido= /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
-
 function IniciarSesión() {
 
-  let objetUser=localStorage.getItem('infoUsuarios')
+  let objetUser=JSON.parse(localStorage.getItem('infoUsuarios'));
 
-  let ObjetAlmacenados=objetUser.split(',');
-
-  console.log(ObjetAlmacenados);
-
-  for (let index = 0; index < ObjetAlmacenados.length; index++) {
-    if (condition) {
+    encontrado = objetUser.find(user => user.correo == correo.value && user.contraseña==contraseña.value);
+  
+    if (encontrado) {
       
+      window.location.href="mainpage.html"
+
     } else {
+      alert('Datos incorrectos. Recuerda poner la misma información que usaste en el Registro.')
       
     }
     
     
-  }
+  
 
   /*let infoCorreos=localStorage.getItem('correo');
 
