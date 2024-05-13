@@ -4,23 +4,52 @@ let changename=JSON.parse(localStorage.getItem('infoUsuarios'));
 
 let preVista=document.getElementById('preVista');
 
+let archivoEntrada = document.querySelector('input');
+
+nameUser.innerHTML=(JSON.stringify(changename[1].nombre));
+
 /*searchName=changename.find(user=>user.nombre=nombre.value);*/
 //window.location.reload//
 
 /*console.log(searchName);*/
 
-nameUser.innerHTML=(JSON.stringify(changename[1].nombre));
 //Esto funciona muy bien sin embargo falta mejorarlo*/
 
-function mostrarImagen(event) {
+archivoEntrada.addEventListener('change', () => {
 
-  var file = event.target;
+  const archivoLector = new FileReader();
+
+  //console.log(archivoEntrada);
+  
+  archivoLector.readAsDataURL(archivoEntrada.files[0]);
+
+  archivoLector.addEventListener('load',() => {
+
+    const url = archivoLector.result;
+
+     const img = new Image();
+
+     img.src = url;
+
+     preVista.appendChild(img);
+
+     console.log(img);
+
+  })
+
+})
+
+
+
+/*function mostrarImagen(event) {
+
+  var entradaArchvo = event.target;
 
   console.log(file);
 
-  let files = file.files;
+  let Archivos = Archivos.Archivo;
 
-  let firstFile = files[0];
+  let primerArchivo = Archivos[0];
 
   var reader = new FileReader();
 
@@ -29,7 +58,7 @@ function mostrarImagen(event) {
     console.log('RESULT', reader.result)
   }
   reader.readAsDataURL(firstFile);
-}
+}*/
 
 //console.log(changename[0].nombre);//
 
