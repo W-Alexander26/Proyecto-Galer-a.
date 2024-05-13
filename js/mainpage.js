@@ -6,6 +6,8 @@ let preVista=document.getElementById('preVista');
 
 let archivoEntrada = document.querySelector('input');
 
+let savedImg=[];
+
 nameUser.innerHTML=(JSON.stringify(changename[1].nombre));
 
 /*searchName=changename.find(user=>user.nombre=nombre.value);*/
@@ -30,6 +32,12 @@ archivoEntrada.addEventListener('change', () => {
      const img = new Image();
 
      img.src = url;
+
+     img.style.width="15%"
+
+     img.style.height="80px"
+
+     img.style.margin= "5px"
 
      preVista.appendChild(img);
 
